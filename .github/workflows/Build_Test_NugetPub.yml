@@ -26,13 +26,13 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Restore
-      run: dotnet restore ./Project-Remedy/Project.Remedy.sln
+      run: dotnet restore ./Project.Remedy.sln
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore ./Project-Remedy/Project.Remedy.sln
+      run: dotnet build --configuration Release --no-restore ./Project.Remedy.sln
       
     - name: Test
-      run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./Project-Remedy/Project.Remedy.sln
+      run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./Project.Remedy.sln
       
     - name: Setup Nuget
       uses: nuget/setup-nuget@v1
@@ -40,9 +40,9 @@ jobs:
           nuget-version: latest 
     
     - name: Pack Remedy.Core.Extensions
-      run: dotnet pack --output ./nupkgs --configuration Release ./Project-Remedy/Remedy.Core.Extensions/Remedy.Core.Extensions.csproj
+      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core.Extensions/Remedy.Core.Extensions.csproj
     - name: Pack Remedy.Core
-      run: dotnet pack --output ./nupkgs --configuration Release ./Project-Remedy/Remedy.Core/Remedy.Core.csproj
+      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core/Remedy.Core.csproj
       
     - name: Push packages
       run: dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key '${{secrets.NUGET_API_KEY}}}' --skip-duplicate
