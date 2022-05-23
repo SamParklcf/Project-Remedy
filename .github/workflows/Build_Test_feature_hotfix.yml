@@ -1,0 +1,35 @@
+name: Build and Test
+
+on:
+  push:
+    branches : [ feature, hotfix ]
+
+env:
+  DOTNET_VERSION: '6.0.x'
+  
+jobs:
+  build:
+    runs-on: [ windows-latest ]
+    
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: List of projects
+      run: dotnet sln ./Project.Remedy.sln list
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore
+      run: dotnet restore ./Project.Remedy.sln
+    
+    - name: Build
+      run: dotnet build --configuration Release --no-restore ./Project.Remedy.sln
+      
+    - name: Test
+      run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./Project.Remedy.sln
