@@ -6,7 +6,7 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>Remedy.Core</Title>
 		<Authors>Remedy</Authors>
-		<Description>Provides core features by extensions</Description>
+		<Description>Provides core features</Description>
 		<Copyright>SamPark©$(AssemblyName)</Copyright>
 		<PackageProjectUrl>https://dev.azure.com/SamParklcf/Remedy</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>

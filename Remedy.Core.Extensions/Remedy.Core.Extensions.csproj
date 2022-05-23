@@ -9,10 +9,10 @@
 		<Description>Provides core features by extensions</Description>
 		<Copyright>SamPark©$(AssemblyName)</Copyright>
 		<PackageProjectUrl>https://dev.azure.com/SamParklcf/Remedy</PackageProjectUrl>
-		<PackageIcon>128.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://dev.azure.com/SamParklcf/_git/Remedy</RepositoryUrl>
 		<PackageTags>remedy, core, extensions</PackageTags>
+		<PackageIcon>128.png</PackageIcon>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
