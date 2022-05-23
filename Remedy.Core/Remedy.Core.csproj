@@ -10,32 +10,32 @@
 		<Copyright>SamPark©$(AssemblyName)</Copyright>
 		<PackageProjectUrl>https://dev.azure.com/SamParklcf/Remedy</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RepositoryUrl>https://dev.azure.com/SamParklcf/_git/Remedy</RepositoryUrl>
 		<PackageTags>Remedy, Dispose, Clone, Core, Model, Framework</PackageTags>
 		<PackageIcon>128.png</PackageIcon>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\Designs\Icons\128.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<None Include="..\LICENSE">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
-		</None>
 		<None Include="..\README.md">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.0.1" />
 		<PackageReference Include="GitVersion.MsBuild" Version="5.10.1">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
 	</ItemGroup>

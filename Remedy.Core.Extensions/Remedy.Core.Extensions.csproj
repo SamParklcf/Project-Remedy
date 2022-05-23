@@ -10,10 +10,10 @@
 		<Copyright>SamPark©$(AssemblyName)</Copyright>
 		<PackageProjectUrl>https://dev.azure.com/SamParklcf/Remedy</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryUrl>https://dev.azure.com/SamParklcf/_git/Remedy</RepositoryUrl>
-		<PackageTags>remedy, core, extensions</PackageTags>
-		<PackageIcon>128.png</PackageIcon>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryUrl>https://dev.azure.com/SamParklcf/_git/Remedy</RepositoryUrl>
+		<PackageTags>Remedy, Core, Extensions</PackageTags>
+		<PackageIcon>128.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -22,8 +22,8 @@
 			<PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\LICENSE">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\README.md">
 			<Pack>True</Pack>
