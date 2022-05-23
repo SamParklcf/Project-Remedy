@@ -8,10 +8,10 @@
 		<Authors>Remedy</Authors>
 		<Description>Provides core features by extensions</Description>
 		<Copyright>SamPark©$(AssemblyName)</Copyright>
-		<PackageProjectUrl>https://dev.azure.com/SamParklcf/Remedy</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SamParklcf/Project-Remedy</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<RepositoryUrl>https://dev.azure.com/SamParklcf/_git/Remedy</RepositoryUrl>
+		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
 		<PackageTags>Remedy, Core, Extensions</PackageTags>
 		<PackageIcon>128.png</PackageIcon>
 	</PropertyGroup>
