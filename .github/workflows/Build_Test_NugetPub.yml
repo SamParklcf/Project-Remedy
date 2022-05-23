@@ -1,0 +1,48 @@
+name: Build, Test and publish nuget packages
+
+on:
+  push:
+    branches : [ develop, main ]
+
+env:
+  DOTNET_VERSION: '6.0.x'
+  
+jobs:
+  build:
+    runs-on: [ windows-latest ]
+    
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: List of projects
+      run: dotnet sln ./Project.Remedy.sln list
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore
+      run: dotnet restore ./Project.Remedy.sln
+    
+    - name: Build
+      run: dotnet build --configuration Release --no-restore ./Project.Remedy.sln
+      
+    - name: Test
+      run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./Project.Remedy.sln
+      
+    - name: Setup Nuget
+      uses: nuget/setup-nuget@v1
+      with:
+          nuget-version: latest 
+    
+    - name: Pack Remedy.Core.Extensions
+      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core.Extensions/Remedy.Core.Extensions.csproj
+    - name: Pack Remedy.Core
+      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core/Remedy.Core.csproj
+      
+    - name: Push packages
+      run: dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key '${{secrets.NUGET_API_KEY}}}' --skip-duplicate
