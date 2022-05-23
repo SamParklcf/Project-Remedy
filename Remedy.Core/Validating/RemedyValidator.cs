@@ -1,4 +1,4 @@
-﻿namespace Remedy.Core.Validation
+﻿namespace Remedy.Core.Validating
 {
     using FluentValidation;
 

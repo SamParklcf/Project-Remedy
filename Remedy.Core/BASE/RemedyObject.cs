@@ -1,6 +1,6 @@
 ﻿namespace Remedy.Core
 {
-    using Remedy.Core.Validation;
+    using Remedy.Core.Validating;
 
     /// <summary> Represents a base class to make an object. </summary>
     public class RemedyObject : RemedyModel, IRemedyDisposer, IRemedyLifeTracker
