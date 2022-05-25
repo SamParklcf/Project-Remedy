@@ -5,21 +5,21 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>Remedy.Core</Title>
-		<Authors>Remedy</Authors>
+		<Authors>SamParklcf@hotmail.com</Authors>
 		<Description>Provides core features</Description>
-		<Copyright>SamPark©$(AssemblyName)</Copyright>
+		<Copyright>$(AssemblyName)©2022</Copyright>
 		<PackageProjectUrl>https://github.com/SamParklcf/Project-Remedy</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
 		<PackageTags>Remedy, Dispose, Clone, Core, Model, Framework</PackageTags>
 		<PackageIcon>128.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\Designs\Icons\128.png">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\LICENSE">
 			<Pack>True</Pack>

@@ -5,13 +5,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Title>Remedy.Core.Extensions</Title>
-		<Authors>Remedy</Authors>
+		<Authors>SamParklcf@hotmail.com</Authors>
 		<Description>Provides core features by extensions</Description>
-		<Copyright>SamPark©$(AssemblyName)</Copyright>
+		<Copyright>$(AssemblyName)©2022</Copyright>
 		<PackageProjectUrl>https://github.com/SamParklcf/Project-Remedy</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
 		<PackageTags>Remedy, Core, Extensions</PackageTags>
 		<PackageIcon>128.png</PackageIcon>
 	</PropertyGroup>
