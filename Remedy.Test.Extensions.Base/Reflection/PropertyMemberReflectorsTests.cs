@@ -1,8 +1,8 @@
-﻿namespace Remedy.Test.Core.Extensions.Reflection
+﻿namespace Remedy.Test.Extensions.Base.Reflection
 {
     using System.Linq.Expressions;
 
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base.Reflection;
     using Remedy.Test.Base;
 
     public class PropertyMemberReflectorsTests

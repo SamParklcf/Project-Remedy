@@ -1,6 +1,6 @@
-﻿namespace Remedy.Test.Core.Extensions
+﻿namespace Remedy.Test.Extensions.Base
 {
-    using Remedy.Core.Extensions;
+    using Remedy.Extensions.Base;
 
     public class EqualityCheckersTests
     {

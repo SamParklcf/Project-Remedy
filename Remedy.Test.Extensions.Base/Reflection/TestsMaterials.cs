@@ -1,4 +1,4 @@
-﻿namespace Remedy.Test.Core.Extensions.Reflection
+﻿namespace Remedy.Test.Extensions.Base.Reflection
 {
     public class A
     {

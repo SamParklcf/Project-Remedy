@@ -5,8 +5,8 @@
     using FluentValidation;
     using FluentValidation.Results;
 
-    using Remedy.Core.Extensions.Reflection;
     using Remedy.Core.Validating;
+    using Remedy.Extensions.Base.Reflection;
 
     /// <summary> Represents a base class for modeling objects. </summary>
     public class RemedyModel : RemedyNotifier, IRemedyState, IRemedyCloner, IRemedyValidator<RemedyModel>

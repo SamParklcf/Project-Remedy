@@ -2,6 +2,8 @@
 {
     using Extensions;
 
+    using Remedy.Extensions.Base;
+
     /// <summary> Represents a class to parameterizing objects. </summary>
     public class RemedyParameter : RemedyNotifier
     {

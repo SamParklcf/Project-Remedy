@@ -1,4 +1,4 @@
-﻿namespace Remedy.Core.Extensions
+﻿namespace Remedy.Extensions.Base
 {
     /// <summary> Provides extensions to checking equality. </summary>
 

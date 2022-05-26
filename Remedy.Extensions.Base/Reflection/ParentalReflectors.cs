@@ -1,4 +1,4 @@
-﻿namespace Remedy.Core.Extensions.Reflection
+﻿namespace Remedy.Extensions.Base.Reflection
 {
     /// <summary> Provides extensions to work with type information of parents. </summary>
     public static class ParentalReflectors

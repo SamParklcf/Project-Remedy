@@ -1,4 +1,4 @@
-﻿namespace Remedy.Core.Extensions.Reflection
+﻿namespace Remedy.Extensions.Base.Reflection
 {
     using System.Linq.Expressions;
 

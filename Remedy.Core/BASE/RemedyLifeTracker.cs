@@ -1,7 +1,7 @@
 ﻿namespace Remedy.Core
 {
-    using Remedy.Core.Extensions;
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base;
+    using Remedy.Extensions.Base.Reflection;
 
     /// <summary> Represents a class for object life time tracking. </summary>
     public class RemedyLifeTracker : RemedyNotifier, IRemedyLifeTracker

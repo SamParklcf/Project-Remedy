@@ -1,7 +1,7 @@
 ﻿namespace Remedy.Test.Core
 {
     using Remedy.Core;
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base.Reflection;
 
     public class RemedyLifeTrackerTests
     {

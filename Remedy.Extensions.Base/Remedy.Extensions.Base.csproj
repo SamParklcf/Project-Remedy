@@ -4,9 +4,9 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<Title>Remedy.Core.Extensions</Title>
+		<Title>Remedy.Extensions.Base</Title>
 		<Authors>SamParklcf@hotmail.com</Authors>
-		<Description>Provides core features by extensions</Description>
+		<Description>Provides base features by extensions</Description>
 		<Copyright>$(AssemblyName)©2022</Copyright>
 		<PackageProjectUrl>https://github.com/SamParklcf/Project-Remedy</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/SamParklcf/Project-Remedy</RepositoryUrl>
@@ -22,20 +22,20 @@
 			<PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GitVersion.MsBuild" Version="5.10.1">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
+	  <PackageReference Include="GitVersion.MsBuild" Version="5.10.1">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
 	</ItemGroup>
 
 </Project>

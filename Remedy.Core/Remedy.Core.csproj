@@ -41,7 +41,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Remedy.Core.Extensions\Remedy.Core.Extensions.csproj" />
+	  <ProjectReference Include="..\Remedy.Extensions.Base\Remedy.Extensions.Base.csproj" />
 	</ItemGroup>
 
 </Project>

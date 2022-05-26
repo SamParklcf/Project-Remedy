@@ -4,9 +4,8 @@
     using System.Linq.Expressions;
     using System.Runtime.CompilerServices;
 
-    using Extensions;
-
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base;
+    using Remedy.Extensions.Base.Reflection;
 
     /// <summary>
     /// Represents a base class to providing <see cref="INotifyPropertyChanged"/> mechanism for an object.

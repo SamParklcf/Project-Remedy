@@ -1,6 +1,6 @@
-﻿namespace Remedy.Test.Core.Extensions.Reflection
+﻿namespace Remedy.Test.Extensions.Base.Reflection
 {
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base.Reflection;
 
     public class ParentalReflectorsTests
     {

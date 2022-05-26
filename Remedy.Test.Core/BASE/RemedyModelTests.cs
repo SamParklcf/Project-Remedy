@@ -3,8 +3,8 @@
     using System;
 
     using Remedy.Core;
-    using Remedy.Core.Extensions;
-    using Remedy.Core.Extensions.Reflection;
+    using Remedy.Extensions.Base;
+    using Remedy.Extensions.Base.Reflection;
     using Remedy.Test.Base;
 
     public class RemedyModelTests
