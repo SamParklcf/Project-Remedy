@@ -121,13 +121,17 @@
         ///<inheritdoc/>
         public override void RegisterRules()
         {
-            RuleFor(x => x.Id,
-                    x => x.NotNull(),
-                    CascadeMode.Stop);
+            RuleFor(x => x.Id)
+                .Cascade(CascadeMode.Stop)
+                .Must(id => id != Guid.Empty)
+                .WithMessage($"{nameof(RemedyModel.Id)} should not be empty.")
+                .WithSeverity(Severity.Error);
 
-            RuleFor(x => x.GetState(),
-                    x => x.Must(y => y is not null && y.Any()),
-                    CascadeMode.Stop);
+            RuleFor(x => x.GetState())
+                .Cascade(CascadeMode.Stop)
+                .Must(x => x is not null && x.Any())
+                .WithMessage($"{nameof(RemedyModel.GetState)} should have at least 1 value.")
+                .WithSeverity(Severity.Error);
         }
     }
 }
