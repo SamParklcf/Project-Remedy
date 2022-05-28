@@ -39,8 +39,8 @@ jobs:
       with:
           nuget-version: latest 
     
-    - name: Pack Remedy.Core.Extensions
-      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core.Extensions/Remedy.Core.Extensions.csproj
+    - name: Pack Remedy.Extensions.Base
+      run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Extensions.Base/Remedy.Extensions.Base.csproj
     - name: Pack Remedy.Core
       run: dotnet pack --output ./nupkgs --configuration Release ./Remedy.Core/Remedy.Core.csproj
       
