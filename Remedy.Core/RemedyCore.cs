@@ -2,6 +2,8 @@
 {
     using Microsoft.Extensions.DependencyInjection;
 
+    using Remedy.Extensions.Base.TypeCheckers;
+
     /// <summary> Represents a class for initializing <see cref="Remedy.Core"/> library. </summary>
     public static class RemedyCore
     {
@@ -14,10 +16,11 @@
         {
             get
             {
-                return _serviceProvider is null
-                    ? throw new RemedyInitializationException($"'{nameof(RemedyCore)}' is not initialized," +
-                        $" try use {nameof(RemedyCore)}.{nameof(RemedyCore.Init)} first.")
-                    : _serviceProvider;
+                _serviceProvider.EnsureNotNull(
+                    new RemedyInitializationException($"'{nameof(RemedyCore)}' is not initialized," +
+                    $" try use {nameof(RemedyCore)}.{nameof(RemedyCore.Init)} first."));
+
+                return _serviceProvider;
             }
         }
 

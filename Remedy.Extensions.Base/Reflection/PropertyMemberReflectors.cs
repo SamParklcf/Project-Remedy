@@ -2,6 +2,8 @@
 {
     using System.Linq.Expressions;
 
+    using Remedy.Extensions.Base.TypeCheckers;
+
     /// <summary> Provides extensions to work with property of type information. </summary>
     public static class PropertyMemberReflectors
     {
@@ -17,10 +19,7 @@
         /// </exception>
         public static string GetPropertyName<T>(this Expression<Func<T>> propertyExpression)
         {
-            if (propertyExpression is null)
-            {
-                throw new ArgumentNullException(nameof(propertyExpression));
-            }
+            propertyExpression.EnsureNotNull();
 
             if (propertyExpression.Body.NodeType != ExpressionType.MemberAccess)
             {
