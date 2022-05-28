@@ -1,8 +1,7 @@
 ﻿namespace Remedy.Core
 {
-    using Extensions;
-
     using Remedy.Extensions.Base;
+    using Remedy.Extensions.Base.TypeCheckers;
 
     /// <summary> Represents a class to parameterizing objects. </summary>
     public class RemedyParameter : RemedyNotifier
@@ -18,14 +17,14 @@
         /// </exception>
         public RemedyParameter(string name, object value)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
+            Name = name.GetValueIfNotNullOrWhitespace();
 
-            Name = name;
+            Value = value.GetValueIfNotNull();
+        }
 
-            Value = value ?? throw new ArgumentNullException(nameof(value));
+        /// <summary> Initializes a new instance of <see cref="RemedyParameter"/> class. </summary>
+        protected RemedyParameter()
+        {
         }
 
         /// <summary> Gets or sets the parameter name. </summary>
@@ -69,9 +68,16 @@
         /// <exception cref="ArgumentNullException">
         /// Throws if <paramref name="name"/> or <paramref name="value"/> be null or empty.
         /// </exception>
-        public RemedyParameter(string name, TValue value) : base(name, value)
+        public RemedyParameter(string name, TValue value)
         {
-            Value = value;
+            Name = name.GetValueIfNotNullOrWhitespace();
+
+            Value = value.GetValueIfNotNull();
+        }
+
+        /// <summary> Initializes a new instance of <see cref="RemedyParameter"/> class. </summary>
+        protected RemedyParameter() : base()
+        {
         }
 
         /// <summary> Gets or sets the paramter value. </summary>

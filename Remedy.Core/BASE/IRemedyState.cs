@@ -16,5 +16,11 @@
         /// <summary> Gets states of the object. </summary>
         /// <returns> List of object's parameters. </returns>
         IReadOnlyList<RemedyParameter> GetState();
+
+        /// <summary>
+        /// Collects <see cref="GetState"/> of the object and packs it to a string format value.
+        /// </summary>
+        /// <returns> String value represents <see cref="GetState"/> of the object. </returns>
+        string Pack();
     }
 }

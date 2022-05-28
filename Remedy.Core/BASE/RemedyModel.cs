@@ -7,6 +7,7 @@
 
     using Remedy.Core.Validating;
     using Remedy.Extensions.Base.Reflection;
+    using Remedy.Extensions.Base.TypeCheckers;
 
     /// <summary> Represents a base class for modeling objects. </summary>
     public class RemedyModel : RemedyNotifier, IRemedyState, IRemedyCloner, IRemedyValidator<RemedyModel>
@@ -24,12 +25,7 @@
         /// <exception cref="ArgumentException"> Throws if <paramref name="id"/> be empty. </exception>
         protected RemedyModel(Guid id)
         {
-            if (id == Guid.Empty)
-            {
-                throw new ArgumentException($"{nameof(id)} is not provided correctly, and should not be empty.");
-            }
-
-            Id = id;
+            Id = id.GetValueIfNotEmpty($"{nameof(id)} is not provided correctly, and should not be empty.");
         }
 
         /// <summary> Gets an unique identifier for the object. </summary>
@@ -81,8 +77,12 @@
             };
 
         ///<inheritdoc/>
-        public override string ToString() =>
+        public virtual string Pack() =>
             $"[{Id}] - [{nameof(IsValid)}: {IsValid}]";
+
+        ///<inheritdoc/>
+        public override string ToString() =>
+            Pack();
 
         ///<inheritdoc/>
         public virtual bool Validate()
@@ -94,9 +94,7 @@
         public ValidationResult Validate<TModel>(RemedyValidator<TModel> validator)
             where TModel : RemedyModel, new()
         {
-            if (validator is null)
-                throw new ArgumentNullException(nameof(validator));
-
+            validator.EnsureNotNull();
             validator.InitRules();
 
             var validationResult = validator.Validate((TModel)this);

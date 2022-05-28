@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remedy.Core", "Remedy.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remedy.Test.Core", "Remedy.Test.Core\Remedy.Test.Core.csproj", "{A6161622-ED35-49F9-9E55-D1ACF651F59C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remedy.Extensions.Base", "Remedy.Extensions.Base\Remedy.Extensions.Base.csproj", "{EFAE1635-5B3D-4C04-B75A-01E677CCD166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remedy.Extensions.Base", "Remedy.Extensions.Base\Remedy.Extensions.Base.csproj", "{EFAE1635-5B3D-4C04-B75A-01E677CCD166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remedy.Test.Extensions.Base", "Remedy.Test.Extensions.Base\Remedy.Test.Extensions.Base.csproj", "{AFA4C7F2-2540-4C1A-9507-0DA9B2212839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remedy.Test.Extensions.Base", "Remedy.Test.Extensions.Base\Remedy.Test.Extensions.Base.csproj", "{AFA4C7F2-2540-4C1A-9507-0DA9B2212839}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

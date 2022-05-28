@@ -66,6 +66,10 @@
         }
 
         ///<inheritdoc/>
+        public virtual string Pack() =>
+            $"[IsAlive: {IsObjectAlive()}] - [Duration: {GetALiveTime()}]";
+
+        ///<inheritdoc/>
         public DateTime RegisterDeath()
         {
             if (DeathTime == DateTime.MinValue)
@@ -78,6 +82,6 @@
 
         ///<inheritdoc/>
         public override string ToString() =>
-            $"[IsAlive: {IsObjectAlive()}] - [Duration: {GetALiveTime()}]";
+            Pack();
     }
 }

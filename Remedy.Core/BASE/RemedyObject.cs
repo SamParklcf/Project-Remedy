@@ -1,6 +1,7 @@
 ﻿namespace Remedy.Core
 {
     using Remedy.Core.Validating;
+    using Remedy.Extensions.Base.TypeCheckers;
 
     /// <summary> Represents a base class to make an object. </summary>
     public class RemedyObject : RemedyModel, IRemedyDisposer, IRemedyLifeTracker
@@ -18,8 +19,7 @@
         /// </exception>
         public RemedyObject(IRemedyLifeTracker lifeTracker)
         {
-            if (lifeTracker is null)
-                throw new ArgumentNullException(nameof(lifeTracker));
+            lifeTracker.EnsureNotNull();
 
             LifeTracker = lifeTracker;
         }
@@ -104,8 +104,8 @@
             GC.ReRegisterForFinalize(this);
 
         ///<inheritdoc/>
-        public override string ToString() =>
-            $"{base.ToString()} - {LifeTracker}";
+        public override string Pack() =>
+            $"{base.Pack()} - {LifeTracker}";
 
         ///<inheritdoc/>
         public override bool Validate()
